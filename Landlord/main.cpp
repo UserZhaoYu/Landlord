@@ -4,7 +4,9 @@ using namespace std;
 
 int main()
 {
-    LandOwner a("张三", "男", "18206061662", "南京", "17张你能秒我？");
+    LandOwner b("张三", "男", "18206061662", "南京", "17张你能秒我？");
+    LandOwner a;
     a.Info();
+    b.Info();
     return 0;
 }
