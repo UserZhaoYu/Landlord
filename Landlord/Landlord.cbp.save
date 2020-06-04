@@ -34,8 +34,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Cards.h" />
 		<Unit filename="include/LandOwner.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Cards.cpp" />
 		<Unit filename="src/LandOwner.cpp" />
 		<Extensions>
 			<code_completion />

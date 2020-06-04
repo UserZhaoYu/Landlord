@@ -7,7 +7,7 @@ using namespace std;
 class LandOwner
 {
     public:
-        LandOwner(string = "", string = "", string, string, string);
+        LandOwner(string = "默认地主", string = "未知", string = "未知", string = "未知", string = "未知");
         ~LandOwner();
 
         string Get_name() { return _name; }

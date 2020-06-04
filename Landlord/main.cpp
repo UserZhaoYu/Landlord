@@ -1,6 +1,9 @@
 #include <iostream>
 #include<LandOwner.h>
+#include<Cards.h>
+#include<vector>
 using namespace std;
+
 
 int main()
 {
@@ -17,5 +20,12 @@ int main()
     delete ptr_landOwner;
     delete ptr_landOwner2;
     delete ptr_landOwner3;
+
+    Cards * card = new Cards;
+    vector<char *> cards = card->get_pile();
+    card->showCards(cards);
+    delete card;
+
+
     return 0;
 }
