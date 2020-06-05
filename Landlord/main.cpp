@@ -22,7 +22,7 @@ int main()
     delete ptr_landOwner3;
 
     Cards * card = new Cards;
-    vector<char *> cards = card->get_pile();
+    vector<string *> cards = card->get_pile();
     card->showCards(cards);
     delete card;
 

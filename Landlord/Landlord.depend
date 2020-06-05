@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1591296208 source:d:\data\it\cplus\gitworkspace\landlord\landlord\main.cpp
+1591338213 source:d:\data\it\cplus\gitworkspace\landlord\landlord\main.cpp
 	<iostream>
 	<LandOwner.h>
 	<Cards.h>
@@ -12,11 +12,11 @@
 	<iostream>
 	<string>
 
-1591296114 d:\data\it\cplus\gitworkspace\landlord\landlord\include\cards.h
+1591338194 d:\data\it\cplus\gitworkspace\landlord\landlord\include\cards.h
 	<vector>
 	<iostream>
 
-1591295587 source:d:\data\it\cplus\gitworkspace\landlord\landlord\src\cards.cpp
+1591338194 source:d:\data\it\cplus\gitworkspace\landlord\landlord\src\cards.cpp
 	"Cards.h"
 	<iostream>
 	<vector>

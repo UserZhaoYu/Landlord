@@ -10,15 +10,15 @@ class Cards
         Cards();
         virtual ~Cards();
         void shuffle();//洗牌
-        vector<char *> get_pile(){return pile;}
-        void showCards(const vector<char * >&);//显示牌
+        vector<string *> get_pile(){return pile;}
+        void showCards(const vector<string * >&);//显示牌
 
     protected:
 
     private:
 
-        vector<char *> pile;//牌堆
-        char card[2];//牌面[数字, 花色]
+        vector<string *> pile;//牌堆
+        string* card = nullptr;//牌面[数字, 花色]
         int now;//当前牌index
 
 };
