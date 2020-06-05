@@ -17,15 +17,15 @@ int main()
     ptr_landOwner3->Info();
     ptr_landOwner2->Info();
     ptr_landOwner->Info();
+    Cards * card = new Cards;
+
+    ptr_landOwner2->addCards(card->draw());
+    ptr_landOwner2->showCards();
+    
+    delete card;
     delete ptr_landOwner;
     delete ptr_landOwner2;
     delete ptr_landOwner3;
-
-    Cards * card = new Cards;
-    vector<char *> cards = get_pile
-    card->showCards();
-    delete card;
-
 
     return 0;
 }

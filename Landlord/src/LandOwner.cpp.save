@@ -1,4 +1,7 @@
 #include "LandOwner.h"
+#include<vector>
+#include<iostream>
+using namespace std;
 
 LandOwner::LandOwner(string name, string sex, string phone, string address, string signature):_name(name), _sex(sex), _phone(phone), _address(address), _signature(signature)
 {
@@ -13,6 +16,18 @@ LandOwner::LandOwner(string name, string sex, string phone, string address, stri
 //    Set_address(address);
 //    Set_signature(signature);
 
+}
+void LandOwner::showCards()//œ‘ æ ÷≈∆
+{
+    for(auto e : pile)
+    {
+        cout << e[1] << e[0] << ", ";
+    }
+    cout << endl;
+}
+void LandOwner::addCards(string *ptr)
+{
+    pile.push_back(ptr);
 }
 LandOwner::~LandOwner()
 {

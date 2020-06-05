@@ -1,5 +1,6 @@
 #ifndef LANDOWNER_H
 #define LANDOWNER_H
+#include<vector>
 #include<iostream>
 #include<string>
 using namespace std;
@@ -31,6 +32,8 @@ class LandOwner
         string Get_signature() { return _signature; }
         void Set_signature(string val) { _signature = val; }
 
+        void addCards(string*);//将摸的牌加入手牌中
+        void showCards();//显示手牌
         //显示用户详细信息
         void Info()
         {
@@ -57,6 +60,7 @@ class LandOwner
         string _phone;         //电话
         string _address;    //地址
         string _signature;  //签名
+        vector<string *> pile;  //手牌
 };
 
 #endif // LANDOWNER_H

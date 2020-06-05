@@ -1,25 +1,28 @@
 # depslib dependency file v1.0
-1591338213 source:d:\data\it\cplus\gitworkspace\landlord\landlord\main.cpp
+1591372339 source:d:\data\it\cplus\gitworkspace\landlord\landlord\main.cpp
 	<iostream>
 	<LandOwner.h>
 	<Cards.h>
 	<vector>
 
-1591292187 source:d:\data\it\cplus\gitworkspace\landlord\landlord\src\landowner.cpp
+1591372660 source:d:\data\it\cplus\gitworkspace\landlord\landlord\src\landowner.cpp
 	"LandOwner.h"
+	<vector>
+	<iostream>
 
-1591238229 d:\data\it\cplus\gitworkspace\landlord\landlord\include\landowner.h
+1591372660 d:\data\it\cplus\gitworkspace\landlord\landlord\include\landowner.h
+	<vector>
 	<iostream>
 	<string>
 
-1591338194 d:\data\it\cplus\gitworkspace\landlord\landlord\include\cards.h
+1591372660 d:\data\it\cplus\gitworkspace\landlord\landlord\include\cards.h
+	<LandOwner.h>
 	<vector>
 	<iostream>
 
-1591338194 source:d:\data\it\cplus\gitworkspace\landlord\landlord\src\cards.cpp
+1591372660 source:d:\data\it\cplus\gitworkspace\landlord\landlord\src\cards.cpp
 	"Cards.h"
 	<iostream>
 	<vector>
-	<iterator>
-	<algorithm>
+	"LandOwner.h"
 

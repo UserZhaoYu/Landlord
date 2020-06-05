@@ -1,8 +1,8 @@
 #include "Cards.h"
 #include<iostream>
 #include<vector>
-#include<iterator>
-#include<algorithm>
+#include"LandOwner.h"
+
 using namespace std;
 
 Cards::Cards()
@@ -40,7 +40,7 @@ Cards::Cards()
                         card[0] = 'K';
                         break;
                     default :
-                        card[0] = char(i+1%13+'0');
+                        card[0] = char((i+1)%13+'0');
                 }
                 switch(int(i/13))//每13张一种花色
                 {
@@ -65,16 +65,12 @@ Cards::Cards()
     }
 
 }
-void Cards::showCards(const vector<string *>& pile)
+string* Cards::draw()
 {
-    cout << "***********" << endl;
-//    copy(pile.cbegin(), pile.cend(), ostream_iterator<char>(cout, ", "));
-//    cout << endl;
-    for(auto e : pile)
-    {
-        cout << e[1] << e[0] << ", ";
-    }
-    cout << endl;
+
+    int num = get_nowCard();
+    set_nowCard(num+1);
+    return pile[num];
 }
 Cards::~Cards()
 {

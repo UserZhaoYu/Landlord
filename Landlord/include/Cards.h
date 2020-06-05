@@ -1,5 +1,6 @@
 #ifndef CARDS_H
 #define CARDS_H
+#include<LandOwner.h>
 #include<vector>
 #include<iostream>
 using namespace std;
@@ -11,7 +12,9 @@ class Cards
         virtual ~Cards();
         void shuffle();//洗牌
         vector<string *> get_pile(){return pile;}
-        void showCards(const vector<string * >&);//显示牌
+        int get_nowCard(){return nowCard;}
+        void set_nowCard(int _nowCard){nowCard = _nowCard;}
+        string* draw();//发牌，返回一组牌面
 
     protected:
 
@@ -19,7 +22,7 @@ class Cards
 
         vector<string *> pile;//牌堆
         string* card = nullptr;//牌面[数字, 花色]
-        int now;//当前牌index
+        int nowCard = 0;//当前牌index
 
 };
 

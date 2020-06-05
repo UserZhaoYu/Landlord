@@ -1,8 +1,8 @@
 #include "Cards.h"
 #include<iostream>
 #include<vector>
-#include<iterator>
-#include<algorithm>
+#include"LandOwner.h"
+
 using namespace std;
 
 Cards::Cards()
@@ -65,16 +65,12 @@ Cards::Cards()
     }
 
 }
-void Cards::showCards(const vector<string *>& pile)
+string* Cards::draw()
 {
-    cout << "***********" << endl;
-//    copy(pile.cbegin(), pile.cend(), ostream_iterator<char>(cout, ", "));
-//    cout << endl;
-    for(auto e : pile)
-    {
-        cout << e[1] << e[0] << ", ";
-    }
-    cout << endl;
+
+    int num = get_nowCard();
+    set_nowCard(num+1);
+    return pile[num];
 }
 Cards::~Cards()
 {
