@@ -1,7 +1,7 @@
 #include <iostream>
 #include<LandOwner.h>
 #include<Cards.h>
-#include<vector>
+
 using namespace std;
 
 
@@ -18,14 +18,15 @@ int main()
     ptr_landOwner2->Info();
     ptr_landOwner->Info();
     Cards * card = new Cards;
-
-    ptr_landOwner2->addCards(card->draw());
+    card->shuffle();
+    for (int a = 0; a < 54; a++)
+        ptr_landOwner2->addCards(card->draw());
     ptr_landOwner2->showCards();
-    
-    delete card;
+
     delete ptr_landOwner;
     delete ptr_landOwner2;
     delete ptr_landOwner3;
+    delete card;
 
     return 0;
 }

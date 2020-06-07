@@ -1,7 +1,6 @@
 #include "LandOwner.h"
-#include<vector>
-#include<iostream>
-using namespace std;
+
+
 
 LandOwner::LandOwner(string name, string sex, string phone, string address, string signature):_name(name), _sex(sex), _phone(phone), _address(address), _signature(signature)
 {

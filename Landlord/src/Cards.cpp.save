@@ -1,9 +1,6 @@
 #include "Cards.h"
-#include<iostream>
-#include<vector>
-#include"LandOwner.h"
 
-using namespace std;
+
 
 Cards::Cards()
 {
@@ -68,9 +65,26 @@ Cards::Cards()
 string* Cards::draw()
 {
 
-    int num = get_nowCard();
-    set_nowCard(num+1);
-    return pile[num];
+    int num = get_nowCard();//获取当前抽到的牌的index
+    set_nowCard(num+1);     //更新当前牌的index
+    if(num + 1 == 54)       //提示抽完了
+        cout << "牌已抽完" << endl;
+    return pile[newPile[num]]; // 返回最新牌的面值和花色
+}
+void Cards::shuffle()
+{
+    srand((unsigned int)(time(NULL)));//随机数
+    for(int b = 0; b < 54; b++)//初始化数组
+        newPile[b] = 54;
+    for(int i = 0; i < 54; i++)
+    {
+
+        int a = rand()%54;              //取0-53的随机数
+        while(find(newPile, newPile + 54,a) != (newPile + 54))//保证是不重复的
+            a = rand()%54;
+        newPile[i] = a;             
+//        cout << newPile[i] << ", ";
+    }
 }
 Cards::~Cards()
 {
@@ -79,5 +93,4 @@ Cards::~Cards()
         delete pile[i];
     }
     cout << "牌堆已删除" << endl;
-
 }

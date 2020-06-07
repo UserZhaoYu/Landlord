@@ -1,7 +1,6 @@
 #include "LandOwner.h"
-#include<vector>
-#include<iostream>
-using namespace std;
+
+
 
 LandOwner::LandOwner(string name, string sex, string phone, string address, string signature):_name(name), _sex(sex), _phone(phone), _address(address), _signature(signature)
 {
@@ -17,7 +16,7 @@ LandOwner::LandOwner(string name, string sex, string phone, string address, stri
 //    Set_signature(signature);
 
 }
-void LandOwner::showCards()//显示手牌
+void LandOwner::showCards()//鏄剧ず鎵嬬墝
 {
     for(auto e : pile)
     {
@@ -31,5 +30,5 @@ void LandOwner::addCards(string *ptr)
 }
 LandOwner::~LandOwner()
 {
-    cout << Get_name() << "已退出！" << endl;
+    cout << Get_name() << "宸查��鍑猴紒" << endl;
 }
